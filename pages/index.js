@@ -15,7 +15,7 @@ export default function Home() {
   const [civilizationData, setCivilizationData] = useState({});
 
   function generateRandomID() {
-    return Math.floor(Math.random() * 1000);
+    return Math.floor(Math.random() * 1000000);
   }
 
   useEffect(() => {
@@ -27,13 +27,9 @@ export default function Home() {
   }, []);
 
   const handleRowClick = (event) => {
-    setCivilizationData(data.filter(x => x.name == event.row.name)[0]);
+    setCivilizationData(event.row);
   };
   
-  useEffect(() => {
-    console.log('Civilization value:', civilizationData);
-  }, [civilizationData]);
-
   return (
     <>
       <Head>
@@ -61,7 +57,7 @@ export default function Home() {
                 <div className={styles.grid}>
                   <h1 className={styles.descriptionh1}>{civilizationData.name}</h1>
                   <p className={styles.descriptionp}>Played: {civilizationData.total}</p>
-                  <p className={styles.descriptionp}>Wins: {civilizationData.wins}</p>
+                  <p className={styles.descriptionp}>Victories: {civilizationData.wins}</p>
                 </div>
               </>)
             }
