@@ -5,17 +5,18 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: #fff;
 }
 
-.description {
-  display: inherit;
+.descriptionh1{
+  display: block;
   justify-content: inherit;
   align-items: inherit;
-  font-size: 0.85rem;
+  font-size: 1.85rem;
   max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
+  width: 100% !important;
   font-family: var(--font-mono);
+  margin-bottom: 50px;
 }
 
 .description a {
@@ -25,9 +26,10 @@
   gap: 0.5rem;
 }
 
-.description p {
+.descriptionp {
+  display: block;
   position: relative;
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 1rem;
   background-color: rgba(var(--callout-rgb), 0.5);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
@@ -41,9 +43,11 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  color: #000;
+  grid-template-columns: repeat(1, minmax(100%, auto));
   max-width: var(--max-width);
   width: 100%;
+  padding: 10%;
 }
 
 .card {
@@ -107,6 +111,11 @@
 .logo {
   position: relative;
 }
+
+/* .MuiDataGrid-root {
+  background: aliceblue !important;
+} */
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -205,7 +214,7 @@
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(1, 100%);
   }
 }
 
